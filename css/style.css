@@ -133,6 +133,11 @@ header{
   padding: var(--space-sm);
 }
 
+.nav-menu .nav-link.active{
+  color: var(--color-accent);
+  font-weight: var(--fw-semibold);
+}
+
 .nav-menu .nav-link:hover{
   color: var(--color-accent);
   transition: var(--transition-normal);
