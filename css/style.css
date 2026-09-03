@@ -401,6 +401,11 @@ section{
   gap: var(--space-lg);
 }
 
+.nav-link2:hover{
+  color: var(--color-accent);
+  transition: var(--transition-normal);
+}
+
 footer{
   display: flex;
   flex-direction: column;
