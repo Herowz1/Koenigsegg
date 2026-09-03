@@ -133,6 +133,11 @@ header{
   padding: var(--space-sm);
 }
 
+.nav-menu .nav-link:hover{
+  color: var(--color-accent);
+  transition: var(--transition-normal);
+}
+
 section{
   text-align: center;
   align-items: center;
