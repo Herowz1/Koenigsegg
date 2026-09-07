@@ -10,18 +10,18 @@
 :root {
 
   /* ─── Color Palette ─────────────────────────────────── */
-  --color-primary:        #0A1F3F;
-  --color-primary-hover:  #0D2A52;
-  --color-secondary:      #132E5B;
-  --color-accent:         #2D7FF9;
-  --color-accent-hover:   #1B6AE0;
+  --color-primary:        #3f0a30;
+  --color-primary-hover:  #520d3c;
+  --color-secondary:      #5b134d;
+  --color-accent:         #f92da7;
+  --color-accent-hover:   #1ee01b;
   --color-accent-light:   #E8F1FE;
   --color-background:     #F4F6F9;
   --color-white:          #FFFFFF;
   --color-text:           #1A1A2E;
   --color-text-light:     #6B7280;
   --color-error:          #E53935;
-  --color-success:        #00C853;
+  --color-success:        #c81b00;
   --color-warning:        #FFB300;
 
   /* ─── Typography ────────────────────────────────────── */
@@ -414,6 +414,10 @@ a:hover {
   .container {
     padding: 0 var(--space-md);
   }
+
+  .gridd{
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 
@@ -421,39 +425,68 @@ a:hover {
    STUDENTS: ADD YOUR CUSTOM STYLES BELOW THIS LINE
    ========================================================== */
 
+
 img{
-  width: 40px;
-  height: 40px;
-  padding-right: 5px;
+  width: 50px;
+  height: 50px;
 }
 
 header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--color-secondary);
+  padding: var(--space-sm);
+  
+  
 }
 
 .nav-logo{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
+
+  margin-left: var(--space-lg);
+}
+
+
+
+.logo-text{
+  padding-left: var(--space-sm);
+  font-size: var(--fs-h3);
+  color: var(--color-white);
+}
+
+.logo-text.accent{
+  color: var(--color-accent);
 }
 
 .nav-menu{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: var(--space-md);
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-lg);
+  margin-top: var(--space-md);
+  padding-right: var(--space-md);
+  text-decoration: none;
+  list-style: none;
+  
 }
 
-.nav-link{
-    color: var(--color-white);
-
+.nav-menu .nav-link{
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  padding: var(--space-sm);
 }
 
-.nav-link.active{
-    color: var(--color-accent);
+.nav-menu .nav-link.active{
+  color: var(--color-accent);
+  font-weight: var(--fw-semibold);
+}
+
+.nav-menu .nav-link:hover{
+  color: var(--color-accent);
+  transition: var(--transition-normal);
 }
 
 .page-hero{
@@ -565,6 +598,7 @@ header{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .card.miss2 img{
@@ -584,7 +618,7 @@ header{
 
 .grid-2{
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-2xl);
 }
 
@@ -669,7 +703,7 @@ header{
   border-radius: var(--space-sm);
 }
 
-.container3{
+.container4{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -682,6 +716,7 @@ header{
 
 .griddy{
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   
 }
 
@@ -799,4 +834,66 @@ header{
 
 .write-up a{
   color: var(--color-white);
+}
+
+.grid-2.gridd{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  gap: var(--space-md);
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: var(--space-md) 0;
+}
+
+.container3{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--color-primary);
+  padding: var(--space-sm);
+  gap: var(--space-5xl);
+}
+
+.container3 p{
+  font-size: var(--fs-h4);
+  color: var(--color-white);
+}
+
+.container3 i{
+  font-size: var(--fs-h3);
+}
+
+.social-icons{
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-md);
+  color: var(--color-white);
+}
+
+.main-category{
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-md);
+  padding-bottom: var(--space-md);
+}
+
+.category{
+  border: 1px solid var(--color-white);
+  background-color: var(--color-text-light);
+  padding: 5px;
+  border-radius: var(--radius-md);
+}
+
+.portfolio-card2 span{
+  color: var(--color-accent);
+  font-weight: bold;
 }
